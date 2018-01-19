@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D05C3E720115A3900131C53 /* Credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0D05C3E620115A3900131C53 /* Credentials.plist */; };
 		0DBC9946200F7D5D006A01B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBC9945200F7D5D006A01B3 /* AppDelegate.swift */; };
 		0DBC994F200F7D5D006A01B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DBC994E200F7D5D006A01B3 /* Assets.xcassets */; };
 		0DBC9952200F7D5D006A01B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DBC9950200F7D5D006A01B3 /* LaunchScreen.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D05C3E620115A3900131C53 /* Credentials.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Credentials.plist; sourceTree = "<group>"; };
 		0DBC9942200F7D5D006A01B3 /* EyeOnBuzz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EyeOnBuzz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DBC9945200F7D5D006A01B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DBC994E200F7D5D006A01B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				0DE3E32420114DD800D808AC /* Credentials.sample.plist */,
+				0D05C3E620115A3900131C53 /* Credentials.plist */,
 				0DBC9953200F7D5D006A01B3 /* Info.plist */,
 				0DE3E32620114F4100D808AC /* Settings.plist */,
 			);
@@ -242,6 +245,7 @@
 			files = (
 				0DBC9952200F7D5D006A01B3 /* LaunchScreen.storyboard in Resources */,
 				0DE3E32720114F4100D808AC /* Settings.plist in Resources */,
+				0D05C3E720115A3900131C53 /* Credentials.plist in Resources */,
 				0DBC994F200F7D5D006A01B3 /* Assets.xcassets in Resources */,
 				0DE3E32520114DD800D808AC /* Credentials.sample.plist in Resources */,
 			);
