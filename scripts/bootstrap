@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+set -e
+
+source "./scripts/bootstrap_functions"
+
+echo "Setting up your environment..."
+root_project_dir="$( cd "$( dirname "${BASH_SOURCE[1]}" )" && pwd )/EyeOnBuzz"
+
+cd $root_project_dir
+
+cp_cnf_example $root_project_dir
