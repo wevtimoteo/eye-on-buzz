@@ -13,6 +13,8 @@
 		0DBC9952200F7D5D006A01B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DBC9950200F7D5D006A01B3 /* LaunchScreen.storyboard */; };
 		0DBC995D200F7D5D006A01B3 /* EyeOnBuzzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBC995C200F7D5D006A01B3 /* EyeOnBuzzTests.swift */; };
 		0DBC9968200F7D5D006A01B3 /* EyeOnBuzzUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBC9967200F7D5D006A01B3 /* EyeOnBuzzUITests.swift */; };
+		0DDDB71920168BFD00BF50D3 /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDDB71820168BFD00BF50D3 /* Credential.swift */; };
+		0DDDB71C20168D1000BF50D3 /* CredentialTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDDB71B20168D1000BF50D3 /* CredentialTest.swift */; };
 		0DE3E32520114DD800D808AC /* Credentials.sample.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0DE3E32420114DD800D808AC /* Credentials.sample.plist */; };
 		0DE3E32720114F4100D808AC /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0DE3E32620114F4100D808AC /* Settings.plist */; };
 /* End PBXBuildFile section */
@@ -47,6 +49,8 @@
 		0DBC9963200F7D5D006A01B3 /* EyeOnBuzzUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EyeOnBuzzUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DBC9967200F7D5D006A01B3 /* EyeOnBuzzUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeOnBuzzUITests.swift; sourceTree = "<group>"; };
 		0DBC9969200F7D5D006A01B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DDDB71820168BFD00BF50D3 /* Credential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credential.swift; sourceTree = "<group>"; };
+		0DDDB71B20168D1000BF50D3 /* CredentialTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialTest.swift; sourceTree = "<group>"; };
 		0DE3E32420114DD800D808AC /* Credentials.sample.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Credentials.sample.plist; sourceTree = "<group>"; };
 		0DE3E32620114F4100D808AC /* Settings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,6 +103,7 @@
 		0DBC9944200F7D5D006A01B3 /* EyeOnBuzz */ = {
 			isa = PBXGroup;
 			children = (
+				0DDDB71720168BDA00BF50D3 /* Infrastructure */,
 				0DBC9945200F7D5D006A01B3 /* AppDelegate.swift */,
 				0DBC994E200F7D5D006A01B3 /* Assets.xcassets */,
 				0DBC9950200F7D5D006A01B3 /* LaunchScreen.storyboard */,
@@ -110,6 +115,7 @@
 		0DBC995B200F7D5D006A01B3 /* EyeOnBuzzTests */ = {
 			isa = PBXGroup;
 			children = (
+				0DDDB71A20168CE900BF50D3 /* Infrastructure */,
 				0DBC995C200F7D5D006A01B3 /* EyeOnBuzzTests.swift */,
 				0DBC995E200F7D5D006A01B3 /* Info.plist */,
 			);
@@ -123,6 +129,22 @@
 				0DBC9969200F7D5D006A01B3 /* Info.plist */,
 			);
 			path = EyeOnBuzzUITests;
+			sourceTree = "<group>";
+		};
+		0DDDB71720168BDA00BF50D3 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				0DDDB71820168BFD00BF50D3 /* Credential.swift */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		0DDDB71A20168CE900BF50D3 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				0DDDB71B20168D1000BF50D3 /* CredentialTest.swift */,
+			);
+			path = Infrastructure;
 			sourceTree = "<group>";
 		};
 		0DE3E32320114D9A00D808AC /* Support */ = {
@@ -272,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DDDB71920168BFD00BF50D3 /* Credential.swift in Sources */,
 				0DBC9946200F7D5D006A01B3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,6 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DDDB71C20168D1000BF50D3 /* CredentialTest.swift in Sources */,
 				0DBC995D200F7D5D006A01B3 /* EyeOnBuzzTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
