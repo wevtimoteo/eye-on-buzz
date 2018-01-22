@@ -15,6 +15,8 @@
 		0DBC9968200F7D5D006A01B3 /* EyeOnBuzzUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBC9967200F7D5D006A01B3 /* EyeOnBuzzUITests.swift */; };
 		0DDDB71920168BFD00BF50D3 /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDDB71820168BFD00BF50D3 /* Credential.swift */; };
 		0DDDB71C20168D1000BF50D3 /* CredentialTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDDB71B20168D1000BF50D3 /* CredentialTest.swift */; };
+		0DDDB71E2016A07600BF50D3 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDDB71D2016A07600BF50D3 /* Router.swift */; };
+		0DDDB7202016A2D600BF50D3 /* RouterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDDB71F2016A2D600BF50D3 /* RouterTest.swift */; };
 		0DE3E32520114DD800D808AC /* Credentials.sample.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0DE3E32420114DD800D808AC /* Credentials.sample.plist */; };
 		0DE3E32720114F4100D808AC /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0DE3E32620114F4100D808AC /* Settings.plist */; };
 /* End PBXBuildFile section */
@@ -51,6 +53,8 @@
 		0DBC9969200F7D5D006A01B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DDDB71820168BFD00BF50D3 /* Credential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credential.swift; sourceTree = "<group>"; };
 		0DDDB71B20168D1000BF50D3 /* CredentialTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialTest.swift; sourceTree = "<group>"; };
+		0DDDB71D2016A07600BF50D3 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		0DDDB71F2016A2D600BF50D3 /* RouterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterTest.swift; sourceTree = "<group>"; };
 		0DE3E32420114DD800D808AC /* Credentials.sample.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Credentials.sample.plist; sourceTree = "<group>"; };
 		0DE3E32620114F4100D808AC /* Settings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				0DDDB71820168BFD00BF50D3 /* Credential.swift */,
+				0DDDB71D2016A07600BF50D3 /* Router.swift */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -143,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				0DDDB71B20168D1000BF50D3 /* CredentialTest.swift */,
+				0DDDB71F2016A2D600BF50D3 /* RouterTest.swift */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -295,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DDDB71920168BFD00BF50D3 /* Credential.swift in Sources */,
+				0DDDB71E2016A07600BF50D3 /* Router.swift in Sources */,
 				0DBC9946200F7D5D006A01B3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DDDB71C20168D1000BF50D3 /* CredentialTest.swift in Sources */,
+				0DDDB7202016A2D600BF50D3 /* RouterTest.swift in Sources */,
 				0DBC995D200F7D5D006A01B3 /* EyeOnBuzzTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
