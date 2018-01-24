@@ -9,10 +9,19 @@
 import Foundation
 import Alamofire
 
+// theMovieDatabaseSession
 class TMDBSession {
     
     let httpClient = HTTPClient.init()
     let notificationCenter = NotificationCenter.default
+    
+    struct Body {
+        struct Pagination {
+            static let page = "page"
+            static let total  = "total_results"
+            static let totalPages = "total_pages"
+        }
+    }
     
     // MARK: HTTP Verbs
     
