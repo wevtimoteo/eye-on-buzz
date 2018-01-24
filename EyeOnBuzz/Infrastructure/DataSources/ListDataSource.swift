@@ -9,6 +9,7 @@
 import Foundation
 
 class ListDataSource {
+    
     let session = TMDBSession.init()
     let targetTable: DataSourceTarget
     
@@ -27,4 +28,5 @@ class ListDataSource {
         self.total = Int(responseBody[TMDBSession.Body.Pagination.total] as! String)!
         self.totalPages = Int(responseBody[TMDBSession.Body.Pagination.totalPages] as! String)!
     }
+    
 }

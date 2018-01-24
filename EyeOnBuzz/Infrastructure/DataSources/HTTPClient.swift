@@ -14,6 +14,7 @@ class HTTPClient {
     func get(url: URLConvertible, parameters: Parameters?) -> DataRequest {
         return request(url: url, method: .get, parameters: parameters, encoding: URLEncoding.default)
     }
+    
     private
     
     func request(url: URLConvertible, method: HTTPMethod, parameters: Parameters?, encoding: ParameterEncoding = JSONEncoding.default) -> DataRequest {
