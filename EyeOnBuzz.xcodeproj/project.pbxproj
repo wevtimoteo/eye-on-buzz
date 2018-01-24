@@ -151,7 +151,6 @@
 				0DDDB7212016A79A00BF50D3 /* DataSources */,
 				0DDDB71820168BFD00BF50D3 /* Credential.swift */,
 				0DDDB71D2016A07600BF50D3 /* Router.swift */,
-				0D9163552019103F005C0122 /* TMDBSession.swift */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -168,6 +167,7 @@
 		0DDDB7212016A79A00BF50D3 /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
+				0D9163552019103F005C0122 /* TMDBSession.swift */,
 				0DDDB7222016A7A900BF50D3 /* HTTPClient.swift */,
 			);
 			path = DataSources;
