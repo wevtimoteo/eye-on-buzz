@@ -42,7 +42,7 @@ playground.xcworkspace
 .build/
 
 # Carthage
-Carthage/Build
+Carthage/
 
 # App specific files
 EyeOnBuzz/Support/Credentials.plist
