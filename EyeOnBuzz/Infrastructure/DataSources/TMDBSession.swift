@@ -26,12 +26,20 @@ class TMDBSession {
     // MARK: HTTP Verbs
     
     func get(url: URLConvertible, parameters: Parameters?, success: @escaping (Int, Any, Any) -> Void, failure: @escaping (Int, Any) -> Void) {
-        httpClient.get(url: url, parameters: parameters).responseJSON { response in
+        httpClient.get(url: url, parameters: signParameters(parameters)).responseJSON { response in
             self.handleResponse(response: response, success: success, failure: failure)
         }
     }
     
     // MARK: Helpers
+    
+    func signParameters(_ parameters: Parameters?) -> Parameters {
+        var signedParameters = parameters ?? Parameters()
+        
+        signedParameters["api_key"] = Credential.theMovieDatabaseAPIKey()
+        
+        return signedParameters
+    }
     
     func handleResponse(response: DataResponse<Any>, success: (Int, [String : AnyObject], Any) -> Void, failure: (Int, Any) -> Void) -> Void {
         let statusCode: Int! = response.response?.statusCode
