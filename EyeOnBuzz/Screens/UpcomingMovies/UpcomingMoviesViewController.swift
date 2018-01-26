@@ -30,6 +30,8 @@ class UpcomingMoviesViewController: UITableViewController, DataSourceTarget {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.setupAppearance()
     }
     
     // MARK: - DataSourceTarget Protocol
@@ -38,6 +40,22 @@ class UpcomingMoviesViewController: UITableViewController, DataSourceTarget {
         self.tableView.reloadData()
         
         self.tableView.refreshControl?.endRefreshing()
+    }
+    
+    // MARK: - Setup appearance
+    
+    func setupAppearance() {
+        self.navigationItem.title = "Upcoming Movies"
+        
+        self.tableView.separatorColor = Colors.byProperty("tableSeparator")
+        self.tableView.separatorInset = UIEdgeInsets.init(top: 0, left: 0, bottom: 1.0, right: 0)
+        
+        self.tableView.backgroundColor = Colors.byProperty("tableViewBackground")
+        
+        self.parent?.view.backgroundColor = Colors.byProperty("tableBackground")
+        
+        // Don't preserve selection between presentations.
+        self.clearsSelectionOnViewWillAppear = false
     }
     
 }

@@ -12,6 +12,7 @@ import UIKit
 class Colors {
     
     static func byProperty(_ propertyName: String) -> UIColor {
+        // TODO: Check if color exist before
         return Skin.colors[propertyName]!
     }
     
@@ -22,11 +23,19 @@ class Colors {
             static let feijoa = UIColor.init(red: 138/255, green: 211/255, blue: 123/255, alpha:1.0)
             static let ming = UIColor.init(red: 64/255, green: 121/255, blue: 140/255, alpha:1.0)
             static let mystic = UIColor.init(red: 222/255, green: 230/255, blue: 237/255, alpha:1.0)
+            static let clear = UIColor.clear
         }
         
         static let colors = [
+            // Background
+            "tableBackground": ColorPalette.clear,
+            "tableViewBackground": ColorPalette.mystic,
+            
             // NavigationBar
             "navigationBarBackground": ColorPalette.feijoa,
+            
+            // Borders
+            "tableSeparator": ColorPalette.clear,
             
             // Fonts
             "navigationBar": ColorPalette.balticSea
