@@ -31,6 +31,8 @@
 		0DDDB7262016ADDE00BF50D3 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DDDB7252016ADDE00BF50D3 /* Alamofire.framework */; };
 		0DE3E32520114DD800D808AC /* Credentials.sample.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0DE3E32420114DD800D808AC /* Credentials.sample.plist */; };
 		0DE3E32720114F4100D808AC /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0DE3E32620114F4100D808AC /* Settings.plist */; };
+		0DE8019A201BDC8600461367 /* UpcomingMovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE80198201BDC8600461367 /* UpcomingMovieCell.swift */; };
+		0DE8019B201BDC8600461367 /* UpcomingMovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DE80199201BDC8600461367 /* UpcomingMovieCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,8 @@
 		0DDDB7252016ADDE00BF50D3 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		0DE3E32420114DD800D808AC /* Credentials.sample.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Credentials.sample.plist; sourceTree = "<group>"; };
 		0DE3E32620114F4100D808AC /* Settings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
+		0DE80198201BDC8600461367 /* UpcomingMovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMovieCell.swift; sourceTree = "<group>"; };
+		0DE80199201BDC8600461367 /* UpcomingMovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpcomingMovieCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +144,8 @@
 			isa = PBXGroup;
 			children = (
 				0D3B6790201A964500D9A533 /* UpcomingMoviesViewController.swift */,
+				0DE80198201BDC8600461367 /* UpcomingMovieCell.swift */,
+				0DE80199201BDC8600461367 /* UpcomingMovieCell.xib */,
 			);
 			path = UpcomingMovies;
 			sourceTree = "<group>";
@@ -369,6 +375,7 @@
 				0DE3E32720114F4100D808AC /* Settings.plist in Resources */,
 				0D05C3E720115A3900131C53 /* Credentials.plist in Resources */,
 				0DBC994F200F7D5D006A01B3 /* Assets.xcassets in Resources */,
+				0DE8019B201BDC8600461367 /* UpcomingMovieCell.xib in Resources */,
 				0DE3E32520114DD800D808AC /* Credentials.sample.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,6 +432,7 @@
 				0DDDB7232016A7A900BF50D3 /* HTTPClient.swift in Sources */,
 				0D91636120192734005C0122 /* UpcomingMovie.swift in Sources */,
 				0DBC9946200F7D5D006A01B3 /* AppDelegate.swift in Sources */,
+				0DE8019A201BDC8600461367 /* UpcomingMovieCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

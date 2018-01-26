@@ -34,12 +34,45 @@ class UpcomingMoviesViewController: UITableViewController, DataSourceTarget {
         self.setupAppearance()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.updateData()
+    }
+    
+    func updateData() {
+        self.upcomingMoviesDataSource?.fetch()
+    }
+    
     // MARK: - DataSourceTarget Protocol
     
     func dataRefreshed(source: DataSource.RefreshSource, status: DataSource.RefreshStatus) {
         self.tableView.reloadData()
         
         self.tableView.refreshControl?.endRefreshing()
+    }
+    
+    // MARK: UITableViewDataSource
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return self.numberOfSections
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return (self.upcomingMoviesDataSource?.total)!
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: UpcomingMovieCell = tableView.dequeueReusableCell(withIdentifier: self.cellIdentifier, for: indexPath) as! UpcomingMovieCell
+        
+        cell.fillInfo(self.upcomingMoviesDataSource!.atIndex(indexPath.row) as! UpcomingMovie)
+        
+        return cell
+    }
+    
+    // MARK: - UITableViewDelegate
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        // TODO: Extract to a constant and make it dynamic when last
+        return 145
     }
     
     // MARK: - Setup appearance
