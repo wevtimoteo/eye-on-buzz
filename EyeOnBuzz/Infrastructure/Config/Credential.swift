@@ -10,8 +10,8 @@ import Foundation
 
 class Credential {
     
-    static let _configurationFile: String = "Credentials"
-    static let _configurationFileExtension: String = "plist"
+    static let _configurationFileName = "Credentials"
+    static let _configurationFileExtension = "plist"
     
     static var environment: String {
         let mainBundle: Bundle = Bundle.main
@@ -22,7 +22,7 @@ class Credential {
     static var configurations: Dictionary<String, String> {
         let mainBundle: Bundle = Bundle.main
         
-        if let configurationURL = mainBundle.url(forResource: _configurationFile, withExtension: _configurationFileExtension),
+        if let configurationURL = mainBundle.url(forResource: _configurationFileName, withExtension: _configurationFileExtension),
             let data = try? Data(contentsOf: configurationURL) {
             if let result = try? PropertyListSerialization.propertyList(from: data, options: [], format: nil) as? [String: Any] {
                 return result![self.environment] as! Dictionary<String, String>
@@ -31,6 +31,8 @@ class Credential {
         
         return [String: String]()
     }
+    
+    // MARK: - Helpers
     
     class func theMovieDatabaseAPIKey() -> String {
         return self.configurations["THEMOVIEDB_API_KEY"]!
