@@ -14,6 +14,7 @@ class UpcomingMoviesViewController: UITableViewController, DataSourceTarget {
     
     let numberOfSections: Int = 1
     let cellIdentifier = "Cell"
+    let cellRowHeight: CGFloat = 148.0
     
     init() {
         super.init(nibName: nil, bundle: nil)
@@ -71,8 +72,7 @@ class UpcomingMoviesViewController: UITableViewController, DataSourceTarget {
     // MARK: - UITableViewDelegate
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        // TODO: Extract to a constant and make it dynamic when last
-        return 145
+        return cellRowHeight
     }
     
     // MARK: - Setup appearance

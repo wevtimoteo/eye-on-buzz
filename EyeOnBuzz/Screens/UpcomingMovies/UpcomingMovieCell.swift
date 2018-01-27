@@ -11,20 +11,29 @@ import UIKit
 class UpcomingMovieCell: UITableViewCell {
 
     @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var posterImage: UIImageView!
+    @IBOutlet weak var releaseDate: UILabel!
+    @IBOutlet weak var genre: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     func fillInfo(_ upcomingMovie: UpcomingMovie) {
         self.title?.text = upcomingMovie.title
+        self.releaseDate?.text = upcomingMovie.releaseDate
+        
+        // TODO: Use GenreList to identify main genre by ID
+        self.genre?.text = String.init(describing: upcomingMovie.genreIdentifiers.first)
+        
+        // TODO: Use real movie poster image
+        if let data = try? Data(contentsOf: URL(string: "https://image.tmdb.org/t/p/w92/dfhztJRiElqmYW4kpvjYe1gENsD.jpg")!) {
+            self.posterImage?.image = UIImage.init(data: data)
+        }
     }
     
 }
