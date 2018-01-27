@@ -13,13 +13,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    var navigationBar: AppNavigationController!
+    var wrapperContainerViewController: WrapperContainerViewController!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.backgroundColor = UIColor.black
-        window?.makeKeyAndVisible()
         
-        window?.rootViewController = UIViewController()
+        setupStatusBar()
+        navigate()
         
         return true
     }
@@ -44,6 +45,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    // MARK: - Helpers
+    
+    func setupStatusBar() {
+        UIApplication.shared.statusBarStyle = .lightContent
+    }
+    
+    func navigate() {
+        wrapperContainerViewController = WrapperContainerViewController.init()
+        navigationBar = wrapperContainerViewController.navigationBar
+        
+        self.window?.rootViewController = wrapperContainerViewController
+        
+        let upcomingMoviesViewController = UpcomingMoviesViewController.init()
+        self.navigationBar.pushViewController(upcomingMoviesViewController, animated: true)
+        
+        self.window?.makeKeyAndVisible()
     }
 
 }

@@ -23,10 +23,14 @@ class ListDataSource {
         self.targetTable = targetTable
     }
     
+    func atIndex(_ index: Int) -> Any {
+        return self.list[index]
+    }
+
     func processPaginationInfo(_ responseBody: Dictionary<String, Any>) {
-        self.page = Int(responseBody[TMDBSession.Body.Pagination.page] as! String)!
-        self.total = Int(responseBody[TMDBSession.Body.Pagination.total] as! String)!
-        self.totalPages = Int(responseBody[TMDBSession.Body.Pagination.totalPages] as! String)!
+        self.page = responseBody[TMDBSession.Body.Pagination.page] as! Int
+        self.total = responseBody[TMDBSession.Body.Pagination.total] as! Int
+        self.totalPages = responseBody[TMDBSession.Body.Pagination.totalPages] as! Int
     }
     
 }

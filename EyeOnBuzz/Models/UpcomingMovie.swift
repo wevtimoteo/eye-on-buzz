@@ -15,12 +15,12 @@ class UpcomingMovie {
     let popularity: Double
     let video: Bool
     let voteCount: Int
-    let voteAverage: Int
-    let posterPath: String
+    let voteAverage: Double
+    let posterPath: String?
     let originalLanguage: String
     let originalTitle: String
     let genreIdentifiers: Array<Int>
-    let backdropPath: String
+    let backdropPath: String?
     let adult: Bool
     let overview: String
     let releaseDate: String
@@ -31,12 +31,12 @@ class UpcomingMovie {
         self.popularity = upcomingMovieInfo["popularity"] as! Double
         self.video = upcomingMovieInfo["video"] as! Bool
         self.voteCount = upcomingMovieInfo["vote_count"] as! Int
-        self.voteAverage = upcomingMovieInfo["vote_average"] as! Int
-        self.posterPath = upcomingMovieInfo["poster_path"] as! String
+        self.voteAverage = upcomingMovieInfo["vote_average"] as! Double
+        self.posterPath = upcomingMovieInfo["poster_path"] as? String
         self.originalLanguage = upcomingMovieInfo["original_language"] as! String
         self.originalTitle = upcomingMovieInfo["original_title"] as! String
         self.genreIdentifiers = upcomingMovieInfo["genre_ids"] as! Array<Int>
-        self.backdropPath = upcomingMovieInfo["backdrop_path"] as! String
+        self.backdropPath = upcomingMovieInfo["backdrop_path"] as? String
         self.adult = upcomingMovieInfo["adult"] as! Bool
         self.overview = upcomingMovieInfo["overview"] as! String
         self.releaseDate = upcomingMovieInfo["release_date"] as! String
