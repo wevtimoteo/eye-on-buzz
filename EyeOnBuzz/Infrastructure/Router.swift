@@ -13,14 +13,14 @@ class Router {
     struct TheMovieDatabaseAPI {
         
         static let version: String = "3"
-        static let address: String = String(format: "https://api.themoviedb.org/%@/", version)
+        static let address: String = String(format: "%@%@", Setting.theMovieDatabaseAPIPrefixURL(), version)
         
         static var upcomingMovies: String { return theMovieDatabaseAPIEndpoint("movie/upcoming") }
         
         // MARK: Helpers
         
         static func theMovieDatabaseAPIEndpoint(_ endpoint: String) -> String {
-            return String(format: "%@%@", address, endpoint)
+            return String(format: "%@/%@", address, endpoint)
         }
         
     }
