@@ -30,10 +30,7 @@ class UpcomingMovieCell: UITableViewCell {
         // TODO: Use GenreList to identify main genre by ID
         self.genre?.text = String.init(describing: upcomingMovie.genreIdentifiers.first)
         
-        // TODO: Use real movie poster image
-        if let data = try? Data(contentsOf: URL(string: "https://image.tmdb.org/t/p/w92/dfhztJRiElqmYW4kpvjYe1gENsD.jpg")!) {
-            self.posterImage?.image = UIImage.init(data: data)
-        }
+        self.posterImage?.image = TMDBImageFactory.fromPath(upcomingMovie.posterPath)
     }
     
 }
