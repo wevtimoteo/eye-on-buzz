@@ -12,7 +12,7 @@ class TMDBImageFactory {
     
     static let imagePrefix = String(format: "%@/t/p/w", Setting.theMovieDatabaseImagePrefixURL())
     
-    class func fromPath(_ imagePath: String?, size: String = "92") -> UIImage? {
+    class func fromPath(_ imagePath: String?, size: String = "185") -> UIImage? {
         if imagePath == nil {
             return nil
         }
