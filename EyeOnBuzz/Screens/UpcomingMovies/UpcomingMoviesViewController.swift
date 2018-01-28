@@ -45,6 +45,19 @@ class UpcomingMoviesViewController: UITableViewController, DataSourceTarget {
         self.upcomingMoviesDataSource?.fetch()
     }
     
+    override func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        let currentOffset = scrollView.contentOffset.y
+        let maximumOffset = scrollView.contentSize.height - scrollView.frame.size.height
+        
+        if (maximumOffset - currentOffset) <= 150.0  && !self.upcomingMoviesDataSource!.isLastPage() {
+            LoadingIndicator.start()
+            
+            DispatchQueue.global(qos: .background).async {
+                self.upcomingMoviesDataSource?.fetchNextPage()
+            }
+        }
+    }
+    
     // MARK: - DataSourceTarget Protocol
     
     func dataRefreshed(source: DataSource.RefreshSource, status: DataSource.RefreshStatus) {
