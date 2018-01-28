@@ -26,6 +26,10 @@ class ListDataSource {
     func atIndex(_ index: Int) -> Any {
         return self.list[index]
     }
+    
+    func count() -> Int {
+        return self.list.count
+    }
 
     func processPaginationInfo(_ responseBody: Dictionary<String, Any>) {
         self.page = responseBody[TMDBSession.Body.Pagination.page] as! Int

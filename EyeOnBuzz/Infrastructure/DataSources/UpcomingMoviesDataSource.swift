@@ -11,14 +11,13 @@ import Foundation
 class UpcomingMoviesDataSource: ListDataSource {
     
     func fetch() {
-        // TODO: Pass API Key on GET request
         self.session.get(url: Router.TheMovieDatabaseAPI.upcomingMovies, parameters: nil, success: { statusCode, headers, response in
             let upcomingMovies = NSMutableArray()
             
             if let fullResponse = response as? Dictionary<String, Any> {
                 self.processPaginationInfo(fullResponse)
                 
-                if let upcomingMoviesResponse = fullResponse["results"] as? [Dictionary<String, Any>] {
+                if let upcomingMoviesResponse = fullResponse[TMDBSession.Body.results] as? [Dictionary<String, Any>] {
                     for upcomingMovieResponse in upcomingMoviesResponse {
                         let upcomingMovie = UpcomingMovie.init(upcomingMovieResponse)
                         

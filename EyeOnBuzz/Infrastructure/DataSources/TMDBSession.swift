@@ -16,6 +16,8 @@ class TMDBSession {
     let notificationCenter = NotificationCenter.default
     
     struct Body {
+        static let results = "results"
+
         struct Pagination {
             static let page = "page"
             static let total  = "total_results"
