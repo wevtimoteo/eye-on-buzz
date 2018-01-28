@@ -36,6 +36,8 @@ class UpcomingMoviesViewController: UITableViewController, DataSourceTarget {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        LoadingIndicator.start()
+        
         self.updateData()
     }
     
@@ -47,6 +49,8 @@ class UpcomingMoviesViewController: UITableViewController, DataSourceTarget {
     
     func dataRefreshed(source: DataSource.RefreshSource, status: DataSource.RefreshStatus) {
         self.tableView.reloadData()
+        
+        LoadingIndicator.stop()
         
         self.tableView.refreshControl?.endRefreshing()
     }
