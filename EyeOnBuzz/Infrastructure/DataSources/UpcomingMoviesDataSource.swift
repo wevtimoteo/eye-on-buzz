@@ -10,28 +10,32 @@ import Foundation
 
 class UpcomingMoviesDataSource: ListDataSource {
     
-    func fetch() {
-        self.session.get(url: Router.TheMovieDatabaseAPI.upcomingMovies, parameters: nil, success: { statusCode, headers, response in
-            let upcomingMovies = NSMutableArray()
-            
-            if let fullResponse = response as? Dictionary<String, Any> {
-                self.processPaginationInfo(fullResponse)
-                
-                if let upcomingMoviesResponse = fullResponse[TMDBSession.Body.results] as? [Dictionary<String, Any>] {
-                    for upcomingMovieResponse in upcomingMoviesResponse {
-                        let upcomingMovie = UpcomingMovie.init(upcomingMovieResponse)
-                        
-                        upcomingMovies.add(upcomingMovie)
+    override func fetch(page: Int = 1) {
+        let parameters: [String : Any] = [
+            "page": page,
+            ]
+        
+        self.session.get(url: Router.TheMovieDatabaseAPI.upcomingMovies, parameters: parameters, success: { statusCode, headers, response in
+            DispatchQueue.main.async {
+                if let fullResponse = response as? Dictionary<String, Any> {
+                    self.processPaginationInfo(fullResponse)
+                    
+                    if let upcomingMoviesResponse = fullResponse[TMDBSession.Body.results] as? [Dictionary<String, Any>] {
+                        for upcomingMovieResponse in upcomingMoviesResponse {
+                            let upcomingMovie = UpcomingMovie.init(upcomingMovieResponse)
+                            
+                            self.list.append(upcomingMovie)
+                        }
                     }
                 }
                 
-                self.list = upcomingMovies as! Array<UpcomingMovie>
+                self.targetTable.dataRefreshed(source: DataSource.RefreshSource.dontCare, status: DataSource.RefreshStatus.success)
             }
-            
-            self.targetTable.dataRefreshed(source: DataSource.RefreshSource.dontCare, status: DataSource.RefreshStatus.success)
         }, failure: { statusCode, response in
-            self.targetTable.dataRefreshed(source: DataSource.RefreshSource.dontCare, status: DataSource.RefreshStatus.failure)
+            DispatchQueue.main.async {
+                self.targetTable.dataRefreshed(source: DataSource.RefreshSource.dontCare, status: DataSource.RefreshStatus.failure)
+            }
         })
     }
-
+    
 }
