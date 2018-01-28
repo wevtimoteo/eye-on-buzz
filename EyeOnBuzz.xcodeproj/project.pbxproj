@@ -18,6 +18,8 @@
 		0D91635C2019182A005C0122 /* DataSourceTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D91635B2019182A005C0122 /* DataSourceTarget.swift */; };
 		0D91635E201919C6005C0122 /* ListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D91635D201919C6005C0122 /* ListDataSource.swift */; };
 		0D91636120192734005C0122 /* UpcomingMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D91636020192734005C0122 /* UpcomingMovie.swift */; };
+		0DA6D46E201E8D8400C18764 /* NVActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DA6D46D201E8D8400C18764 /* NVActivityIndicatorView.framework */; };
+		0DA6D470201E8DBC00C18764 /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA6D46F201E8DBC00C18764 /* LoadingIndicator.swift */; };
 		0DBC9946200F7D5D006A01B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBC9945200F7D5D006A01B3 /* AppDelegate.swift */; };
 		0DBC994F200F7D5D006A01B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DBC994E200F7D5D006A01B3 /* Assets.xcassets */; };
 		0DBC9952200F7D5D006A01B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DBC9950200F7D5D006A01B3 /* LaunchScreen.storyboard */; };
@@ -66,6 +68,8 @@
 		0D91635B2019182A005C0122 /* DataSourceTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceTarget.swift; sourceTree = "<group>"; };
 		0D91635D201919C6005C0122 /* ListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDataSource.swift; sourceTree = "<group>"; };
 		0D91636020192734005C0122 /* UpcomingMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMovie.swift; sourceTree = "<group>"; };
+		0DA6D46D201E8D8400C18764 /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NVActivityIndicatorView.framework; path = Carthage/Build/iOS/NVActivityIndicatorView.framework; sourceTree = "<group>"; };
+		0DA6D46F201E8DBC00C18764 /* LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
 		0DBC9942200F7D5D006A01B3 /* EyeOnBuzz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EyeOnBuzz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DBC9945200F7D5D006A01B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DBC994E200F7D5D006A01B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -97,6 +101,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DDDB7262016ADDE00BF50D3 /* Alamofire.framework in Frameworks */,
+				0DA6D46E201E8D8400C18764 /* NVActivityIndicatorView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,6 +138,7 @@
 			children = (
 				0D3B678A201A890100D9A533 /* Colors.swift */,
 				0DD5D181201D2CF1003180F7 /* ImageFactory.swift */,
+				0DA6D46F201E8DBC00C18764 /* LoadingIndicator.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -260,6 +266,7 @@
 		0DDDB7242016ADDD00BF50D3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0DA6D46D201E8D8400C18764 /* NVActivityIndicatorView.framework */,
 				0DDDB7252016ADDE00BF50D3 /* Alamofire.framework */,
 			);
 			name = Frameworks;
@@ -418,6 +425,7 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/NVActivityIndicatorView.framework",
 			);
 			outputPaths = (
 			);
@@ -432,6 +440,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DA6D470201E8DBC00C18764 /* LoadingIndicator.swift in Sources */,
 				0D9163562019103F005C0122 /* TMDBSession.swift in Sources */,
 				0D3B678B201A890100D9A533 /* Colors.swift in Sources */,
 				0D91635820191240005C0122 /* NotificationNames.swift in Sources */,
