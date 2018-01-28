@@ -22,7 +22,7 @@ class RouterTest: XCTestCase {
     }
     
     func testTheMovieDatabaseAPIAddress() {
-        XCTAssertEqual("https://api.themoviedb.org/3/", describedClass.address)
+        XCTAssertEqual("https://api.themoviedb.org/3", describedClass.address)
     }
     
     func testTheMovieDatabaseAPIUpcomingMoviesEndpoint() {
