@@ -11,7 +11,7 @@ import Foundation
 class ListDataSource {
     
     let session = TMDBSession.init()
-    let targetTable: DataSourceTarget
+    let dataSourceTarget: DataSourceTarget
     
     var list: Array<Any> = []
     
@@ -19,8 +19,8 @@ class ListDataSource {
     var total: Int = 0
     var totalPages: Int = 0
     
-    init(targetTable: DataSourceTarget) {
-        self.targetTable = targetTable
+    init(dataSourceTarget: DataSourceTarget) {
+        self.dataSourceTarget = dataSourceTarget
     }
     
     func atIndex(_ index: Int) -> Any {

@@ -19,7 +19,7 @@ class UpcomingMoviesViewController: UITableViewController, DataSourceTarget {
     init() {
         super.init(nibName: nil, bundle: nil)
         
-        self.upcomingMoviesDataSource = UpcomingMoviesDataSource.init(targetTable: self)
+        self.upcomingMoviesDataSource = UpcomingMoviesDataSource.init(dataSourceTarget: self)
         
         self.tableView.accessibilityLabel = "Upcoming Movies"
         self.tableView.register(UINib.init(nibName: "UpcomingMovieCell", bundle: nil), forCellReuseIdentifier: self.cellIdentifier)
