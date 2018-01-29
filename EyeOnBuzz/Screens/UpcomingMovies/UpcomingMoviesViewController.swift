@@ -47,6 +47,14 @@ class UpcomingMoviesViewController: UITableViewController, DataSourceTarget {
         self.genresDataSource?.fetch()
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let upcomingMovie = self.upcomingMoviesDataSource?.atIndex(indexPath.row) as! UpcomingMovie
+        
+        let upcomingMovieViewController = UpcomingMovieViewController(upcomingMovie)
+        
+        self.navigationController?.pushViewController(upcomingMovieViewController, animated: true)
+    }
+    
     override func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         let currentOffset = scrollView.contentOffset.y
         let maximumOffset = scrollView.contentSize.height - scrollView.frame.size.height
