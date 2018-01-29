@@ -12,6 +12,7 @@
 		0D3B678B201A890100D9A533 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3B678A201A890100D9A533 /* Colors.swift */; };
 		0D3B678E201A911700D9A533 /* WrapperContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3B678D201A911700D9A533 /* WrapperContainerViewController.swift */; };
 		0D3B6791201A964500D9A533 /* UpcomingMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3B6790201A964500D9A533 /* UpcomingMoviesViewController.swift */; };
+		0D557E5D201FDADF0064BBCC /* TagListView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D557E5C201FDADF0064BBCC /* TagListView.framework */; };
 		0D9163562019103F005C0122 /* TMDBSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9163552019103F005C0122 /* TMDBSession.swift */; };
 		0D91635820191240005C0122 /* NotificationNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D91635720191240005C0122 /* NotificationNames.swift */; };
 		0D91635A20191433005C0122 /* UpcomingMoviesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D91635920191433005C0122 /* UpcomingMoviesDataSource.swift */; };
@@ -65,6 +66,7 @@
 		0D3B678A201A890100D9A533 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		0D3B678D201A911700D9A533 /* WrapperContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrapperContainerViewController.swift; sourceTree = "<group>"; };
 		0D3B6790201A964500D9A533 /* UpcomingMoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMoviesViewController.swift; sourceTree = "<group>"; };
+		0D557E5C201FDADF0064BBCC /* TagListView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TagListView.framework; path = Carthage/Build/iOS/TagListView.framework; sourceTree = "<group>"; };
 		0D9163552019103F005C0122 /* TMDBSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBSession.swift; sourceTree = "<group>"; };
 		0D91635720191240005C0122 /* NotificationNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationNames.swift; sourceTree = "<group>"; };
 		0D91635920191433005C0122 /* UpcomingMoviesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMoviesDataSource.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 			files = (
 				0DDDB7262016ADDE00BF50D3 /* Alamofire.framework in Frameworks */,
 				0DA6D46E201E8D8400C18764 /* NVActivityIndicatorView.framework in Frameworks */,
+				0D557E5D201FDADF0064BBCC /* TagListView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +286,7 @@
 		0DDDB7242016ADDD00BF50D3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0D557E5C201FDADF0064BBCC /* TagListView.framework */,
 				0DA6D46D201E8D8400C18764 /* NVActivityIndicatorView.framework */,
 				0DDDB7252016ADDE00BF50D3 /* Alamofire.framework */,
 			);
@@ -443,6 +447,7 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/NVActivityIndicatorView.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/TagListView.framework",
 			);
 			outputPaths = (
 			);
