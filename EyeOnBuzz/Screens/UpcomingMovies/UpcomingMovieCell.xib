@@ -46,7 +46,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kDE-Sp-lBG" userLabel="ReleaseDate">
-                        <rect key="frame" x="102" y="81" width="209" height="21"/>
+                        <rect key="frame" x="102" y="73" width="209" height="21"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="209" id="YDl-re-cJx"/>
                             <constraint firstAttribute="height" constant="21" id="z3n-Hs-ejD"/>
@@ -55,8 +55,8 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Rn-K5-qMG" userLabel="GenreLabel">
-                        <rect key="frame" x="102" y="101" width="42" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genres" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Rn-K5-qMG" userLabel="GenreLabel">
+                        <rect key="frame" x="102" y="85" width="42" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="OiX-YT-80i"/>
                             <constraint firstAttribute="width" constant="42" id="S7u-8c-hhH"/>
@@ -65,20 +65,25 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sRq-1d-M87" userLabel="Genre">
-                        <rect key="frame" x="102" y="116" width="209" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y97-yY-DhC" userLabel="GenreTagListView" customClass="TagListView" customModule="TagListView" propertyAccessControl="none">
+                        <rect key="frame" x="102" y="107" width="209" height="32"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" notEnabled="YES"/>
+                        </accessibility>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="32" id="HQT-GJ-PRL"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="0Rn-K5-qMG" firstAttribute="top" secondItem="MFa-lG-itm" secondAttribute="bottom" constant="17" id="3zw-T4-p5O"/>
+                    <constraint firstItem="0Rn-K5-qMG" firstAttribute="top" secondItem="MFa-lG-itm" secondAttribute="bottom" constant="1" id="3zw-T4-p5O"/>
                     <constraint firstAttribute="trailing" secondItem="myE-wO-9TP" secondAttribute="trailing" constant="9" id="CUt-sI-3wA"/>
+                    <constraint firstItem="Y97-yY-DhC" firstAttribute="top" secondItem="0Rn-K5-qMG" secondAttribute="bottom" constant="1" id="DEy-ZC-rVb"/>
                     <constraint firstItem="MFa-lG-itm" firstAttribute="leading" secondItem="Rq9-pK-D9a" secondAttribute="trailing" constant="5" id="IVL-H2-obg"/>
-                    <constraint firstItem="kDE-Sp-lBG" firstAttribute="top" secondItem="MFa-lG-itm" secondAttribute="bottom" constant="-3" id="Jra-dj-F8G"/>
+                    <constraint firstItem="kDE-Sp-lBG" firstAttribute="top" secondItem="MFa-lG-itm" secondAttribute="bottom" constant="-11" id="Jra-dj-F8G"/>
                     <constraint firstAttribute="trailing" secondItem="kDE-Sp-lBG" secondAttribute="trailing" constant="9" id="KRr-LW-mU5"/>
+                    <constraint firstAttribute="trailing" secondItem="Y97-yY-DhC" secondAttribute="trailing" constant="9" id="Usi-uL-dBR"/>
                     <constraint firstItem="Rq9-pK-D9a" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="VhF-HD-Bfh"/>
                     <constraint firstItem="Rq9-pK-D9a" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="diG-CW-KWg"/>
                     <constraint firstItem="kDE-Sp-lBG" firstAttribute="leading" secondItem="Rq9-pK-D9a" secondAttribute="trailing" constant="5" id="dtv-yu-Wch"/>
@@ -86,11 +91,12 @@
                     <constraint firstItem="myE-wO-9TP" firstAttribute="leading" secondItem="Rq9-pK-D9a" secondAttribute="trailing" constant="5" id="qeh-UG-kdW"/>
                     <constraint firstItem="MFa-lG-itm" firstAttribute="top" secondItem="myE-wO-9TP" secondAttribute="bottom" constant="2" id="qo0-9Y-59I"/>
                     <constraint firstItem="myE-wO-9TP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="w45-lj-3Fg"/>
+                    <constraint firstItem="Y97-yY-DhC" firstAttribute="leading" secondItem="Rq9-pK-D9a" secondAttribute="trailing" constant="5" id="z2H-nr-nYj"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="genre" destination="sRq-1d-M87" id="Oj3-m8-BDV"/>
+                <outlet property="genreTagListView" destination="Y97-yY-DhC" id="hob-E3-JWY"/>
                 <outlet property="posterImage" destination="Rq9-pK-D9a" id="uSI-DZ-RTa"/>
                 <outlet property="releaseDate" destination="kDE-Sp-lBG" id="V4y-Ef-eGQ"/>
                 <outlet property="title" destination="myE-wO-9TP" id="Hyh-8y-gmf"/>
