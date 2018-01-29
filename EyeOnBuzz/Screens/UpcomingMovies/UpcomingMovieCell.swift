@@ -7,16 +7,19 @@
 //
 
 import UIKit
+import TagListView
 
 class UpcomingMovieCell: UITableViewCell {
 
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var posterImage: UIImageView!
     @IBOutlet weak var releaseDate: UILabel!
-    @IBOutlet weak var genre: UILabel!
+    @IBOutlet weak var genreTagListView: TagListView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+
+        self.setupAppearance()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -27,19 +30,24 @@ class UpcomingMovieCell: UITableViewCell {
         self.title?.text = upcomingMovie.title
         self.releaseDate?.text = upcomingMovie.releaseDate
         
-        self.genre?.text = fetchGenreNames(upcomingMovie.genreIdentifiers)
+        genreTagListView.addTags(fetchGenreNames(upcomingMovie.genreIdentifiers))
         
         self.posterImage?.image = TMDBImageFactory.fromPath(upcomingMovie.posterPath)
     }
     
-    func fetchGenreNames(_ genreIdentifiers: Array<Int>) -> String {
+    func fetchGenreNames(_ genreIdentifiers: Array<Int>) -> Array<String> {
         var genreNames = Array<String>()
         
         for genreIdentifier in genreIdentifiers {
             genreNames.append(GenresRepository.sharedInstance.nameByIdentifier(genreIdentifier))
         }
         
-        return genreNames.joined(separator: ", ")
+        return genreNames
+    }
+    
+    func setupAppearance() {
+        genreTagListView.textFont = UIFont.systemFont(ofSize: 11)
+        genreTagListView.alignment = .right
     }
     
 }
