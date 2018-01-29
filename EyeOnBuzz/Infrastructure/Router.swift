@@ -16,7 +16,7 @@ class Router {
         static let address: String = String(format: "%@%@", Setting.theMovieDatabaseAPIPrefixURL(), version)
         
         static var upcomingMovies: String { return theMovieDatabaseAPIEndpoint("movie/upcoming") }
-        static var genres: String { return theMovieDatabaseAPIEndpoint("/genre/movie/list") }
+        static var genres: String { return theMovieDatabaseAPIEndpoint("genre/movie/list") }
         
         // MARK: Helpers
         
