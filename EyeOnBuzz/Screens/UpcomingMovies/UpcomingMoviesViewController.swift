@@ -10,6 +10,7 @@ import UIKit
 
 class UpcomingMoviesViewController: UITableViewController, DataSourceTarget {
     
+    var genresDataSource: GenresDataSource?
     var upcomingMoviesDataSource: UpcomingMoviesDataSource?
     
     let numberOfSections: Int = 1
@@ -19,6 +20,7 @@ class UpcomingMoviesViewController: UITableViewController, DataSourceTarget {
     init() {
         super.init(nibName: nil, bundle: nil)
         
+        self.genresDataSource = GenresDataSource.init(dataSourceTarget: self)
         self.upcomingMoviesDataSource = UpcomingMoviesDataSource.init(dataSourceTarget: self)
         
         self.tableView.accessibilityLabel = "Upcoming Movies"
@@ -42,7 +44,7 @@ class UpcomingMoviesViewController: UITableViewController, DataSourceTarget {
     }
     
     func updateData() {
-        self.upcomingMoviesDataSource?.fetch()
+        self.genresDataSource?.fetch()
     }
     
     override func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
@@ -61,11 +63,19 @@ class UpcomingMoviesViewController: UITableViewController, DataSourceTarget {
     // MARK: - DataSourceTarget Protocol
     
     func dataRefreshed(source: DataSource.RefreshSource, status: DataSource.RefreshStatus) {
-        self.tableView.reloadData()
+        if source == DataSource.RefreshSource.genreList {
+            GenresRepository.setup(list: (self.genresDataSource?.list)!)
+            
+            self.upcomingMoviesDataSource?.fetch()
+        }
         
-        LoadingIndicator.stop()
-        
-        self.tableView.refreshControl?.endRefreshing()
+        if source == DataSource.RefreshSource.dontCare {
+            self.tableView.reloadData()
+            
+            LoadingIndicator.stop()
+            
+            self.tableView.refreshControl?.endRefreshing()
+        }
     }
     
     // MARK: UITableViewDataSource
