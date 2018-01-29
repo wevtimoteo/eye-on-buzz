@@ -12,6 +12,7 @@ struct DataSource {
     
     enum RefreshSource {
         case dontCare
+        case genreList
     }
     
     enum RefreshStatus {

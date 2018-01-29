@@ -29,11 +29,11 @@ class UpcomingMoviesDataSource: ListDataSource {
                     }
                 }
                 
-                self.targetTable.dataRefreshed(source: DataSource.RefreshSource.dontCare, status: DataSource.RefreshStatus.success)
+                self.dataSourceTarget.dataRefreshed(source: DataSource.RefreshSource.dontCare, status: DataSource.RefreshStatus.success)
             }
         }, failure: { statusCode, response in
             DispatchQueue.main.async {
-                self.targetTable.dataRefreshed(source: DataSource.RefreshSource.dontCare, status: DataSource.RefreshStatus.failure)
+                self.dataSourceTarget.dataRefreshed(source: DataSource.RefreshSource.dontCare, status: DataSource.RefreshStatus.failure)
             }
         })
     }
