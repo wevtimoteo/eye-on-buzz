@@ -27,10 +27,19 @@ class UpcomingMovieCell: UITableViewCell {
         self.title?.text = upcomingMovie.title
         self.releaseDate?.text = upcomingMovie.releaseDate
         
-        // TODO: Use GenreList to identify main genre by ID
-        self.genre?.text = String.init(describing: upcomingMovie.genreIdentifiers.first)
+        self.genre?.text = fetchGenreNames(upcomingMovie.genreIdentifiers)
         
         self.posterImage?.image = TMDBImageFactory.fromPath(upcomingMovie.posterPath)
+    }
+    
+    func fetchGenreNames(_ genreIdentifiers: Array<Int>) -> String {
+        var genreNames = Array<String>()
+        
+        for genreIdentifier in genreIdentifiers {
+            genreNames.append(GenresRepository.sharedInstance.nameByIdentifier(genreIdentifier))
+        }
+        
+        return genreNames.joined(separator: ", ")
     }
     
 }
