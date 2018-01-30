@@ -15,6 +15,7 @@
 		0D557E5D201FDADF0064BBCC /* TagListView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D557E5C201FDADF0064BBCC /* TagListView.framework */; };
 		0D557E61201FE8C80064BBCC /* UpcomingMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D557E5F201FE8C80064BBCC /* UpcomingMovieViewController.swift */; };
 		0D557E62201FE8C80064BBCC /* UpcomingMovieViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D557E60201FE8C80064BBCC /* UpcomingMovieViewController.xib */; };
+		0D557E64201FEBBA0064BBCC /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D557E63201FEBBA0064BBCC /* BackButton.swift */; };
 		0D9163562019103F005C0122 /* TMDBSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9163552019103F005C0122 /* TMDBSession.swift */; };
 		0D91635820191240005C0122 /* NotificationNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D91635720191240005C0122 /* NotificationNames.swift */; };
 		0D91635A20191433005C0122 /* UpcomingMoviesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D91635920191433005C0122 /* UpcomingMoviesDataSource.swift */; };
@@ -71,6 +72,7 @@
 		0D557E5C201FDADF0064BBCC /* TagListView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TagListView.framework; path = Carthage/Build/iOS/TagListView.framework; sourceTree = "<group>"; };
 		0D557E5F201FE8C80064BBCC /* UpcomingMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMovieViewController.swift; sourceTree = "<group>"; };
 		0D557E60201FE8C80064BBCC /* UpcomingMovieViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpcomingMovieViewController.xib; sourceTree = "<group>"; };
+		0D557E63201FEBBA0064BBCC /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 		0D9163552019103F005C0122 /* TMDBSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBSession.swift; sourceTree = "<group>"; };
 		0D91635720191240005C0122 /* NotificationNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationNames.swift; sourceTree = "<group>"; };
 		0D91635920191433005C0122 /* UpcomingMoviesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMoviesDataSource.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				0D3B678A201A890100D9A533 /* Colors.swift */,
 				0DD5D181201D2CF1003180F7 /* ImageFactory.swift */,
 				0DA6D46F201E8DBC00C18764 /* LoadingIndicator.swift */,
+				0D557E63201FEBBA0064BBCC /* BackButton.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -495,6 +498,7 @@
 				0DDDB7232016A7A900BF50D3 /* HTTPClient.swift in Sources */,
 				0D91636120192734005C0122 /* UpcomingMovie.swift in Sources */,
 				0DBC9946200F7D5D006A01B3 /* AppDelegate.swift in Sources */,
+				0D557E64201FEBBA0064BBCC /* BackButton.swift in Sources */,
 				0DD5D184201D2DB9003180F7 /* Setting.swift in Sources */,
 				0DE8019A201BDC8600461367 /* UpcomingMovieCell.swift in Sources */,
 				0DA6D474201E9C0E00C18764 /* Genre.swift in Sources */,

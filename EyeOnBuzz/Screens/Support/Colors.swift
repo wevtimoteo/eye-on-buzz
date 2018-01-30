@@ -38,6 +38,8 @@ class Colors {
             "tableSeparator": ColorPalette.clear,
             
             // Fonts
+            // Fonts
+            "backButton": ColorPalette.grape,
             "navigationBar": ColorPalette.balticSea
         ]
     }
