@@ -39,7 +39,7 @@ class Colors {
             
             // Fonts
             // Fonts
-            "backButton": ColorPalette.grape,
+            "backButton": ColorPalette.ming,
             "navigationBar": ColorPalette.balticSea
         ]
     }

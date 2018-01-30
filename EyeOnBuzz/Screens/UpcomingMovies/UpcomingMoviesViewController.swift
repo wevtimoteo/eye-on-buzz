@@ -53,6 +53,7 @@ class UpcomingMoviesViewController: UITableViewController, DataSourceTarget {
         let upcomingMovieViewController = UpcomingMovieViewController(upcomingMovie)
         
         self.navigationController?.pushViewController(upcomingMovieViewController, animated: true)
+        self.navigationItem.backBarButtonItem = BackButton.build()
     }
     
     override func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {

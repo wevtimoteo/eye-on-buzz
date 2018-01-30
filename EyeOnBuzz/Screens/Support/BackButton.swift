@@ -13,7 +13,7 @@ class BackButton: UIBarButtonItem {
     class func build(title: String = "") -> BackButton {
         let backButton: BackButton = BackButton(title: title, style: UIBarButtonItemStyle.plain, target: nil, action: nil)
         
-        backButton.setTitleTextAttributes([NSAttributedStringKey.foregroundColor: Colors.byProperty("backButton")], for: UIControlState.normal)
+        backButton.tintColor = Colors.byProperty("backButton")
         
         return backButton
     }
