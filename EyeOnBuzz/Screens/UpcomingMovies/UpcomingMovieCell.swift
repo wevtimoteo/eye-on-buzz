@@ -30,19 +30,10 @@ class UpcomingMovieCell: UITableViewCell {
         self.title?.text = upcomingMovie.title
         self.releaseDate?.text = upcomingMovie.releaseDate
         
-        genreTagListView.addTags(fetchGenreNames(upcomingMovie.genreIdentifiers))
+        let genreNames: Array<String> = GenresRepository.sharedInstance.namesByIdentifiers(upcomingMovie.genreIdentifiers)
+        genreTagListView.addTags(genreNames)
         
         self.posterImage?.image = TMDBImageFactory.fromPath(upcomingMovie.posterPath)
-    }
-    
-    func fetchGenreNames(_ genreIdentifiers: Array<Int>) -> Array<String> {
-        var genreNames = Array<String>()
-        
-        for genreIdentifier in genreIdentifiers {
-            genreNames.append(GenresRepository.sharedInstance.nameByIdentifier(genreIdentifier))
-        }
-        
-        return genreNames
     }
     
     func setupAppearance() {
