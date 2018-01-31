@@ -35,9 +35,7 @@ class UpcomingMoviesViewController: UITableViewController, DataSourceTarget {
         super.viewDidLoad()
         
         self.setupAppearance()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
+        
         LoadingIndicator.start()
         
         self.updateData()
