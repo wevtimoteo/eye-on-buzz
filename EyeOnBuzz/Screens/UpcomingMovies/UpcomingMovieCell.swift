@@ -30,6 +30,8 @@ class UpcomingMovieCell: UITableViewCell {
         self.title?.text = upcomingMovie.title
         self.releaseDate?.text = upcomingMovie.releaseDate
         
+        genreTagListView.removeAllTags()
+        
         let genreNames: Array<String> = GenresRepository.sharedInstance.namesByIdentifiers(upcomingMovie.genreIdentifiers)
         genreTagListView.addTags(genreNames)
         
