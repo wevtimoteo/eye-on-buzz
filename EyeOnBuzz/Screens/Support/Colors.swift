@@ -28,19 +28,18 @@ class Colors {
         
         static let colors = [
             // Background
-            "tableBackground": ColorPalette.clear,
-            "tableViewBackground": ColorPalette.mystic,
+            "tableBackground": ColorPalette.feijoa,
+            "tableViewBackground": ColorPalette.ming,
             
             // NavigationBar
-            "navigationBarBackground": ColorPalette.feijoa,
+            "navigationBarBackground": ColorPalette.grape,
             
             // Borders
             "tableSeparator": ColorPalette.clear,
             
             // Fonts
-            // Fonts
             "backButton": ColorPalette.ming,
-            "navigationBar": ColorPalette.balticSea
+            "navigationBar": ColorPalette.mystic
         ]
     }
     
