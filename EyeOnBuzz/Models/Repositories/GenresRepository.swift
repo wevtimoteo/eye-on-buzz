@@ -33,4 +33,14 @@ final class GenresRepository {
         return self.list[identifier]!
     }
     
+    func namesByIdentifiers(_ identifiers: Array<Int>) -> Array<String> {
+        var names = Array<String>()
+        
+        for identifier in identifiers {
+            names.append(self.nameByIdentifier(identifier))
+        }
+        
+        return names
+    }
+    
 }

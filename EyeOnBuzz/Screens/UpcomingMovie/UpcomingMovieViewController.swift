@@ -7,8 +7,19 @@
 //
 
 import UIKit
+import TagListView
 
 class UpcomingMovieViewController: UIViewController {
+    
+    @IBOutlet weak var movieScrollView: UIScrollView!
+    @IBOutlet var movieView: UIView!
+    @IBOutlet weak var backdropView: UIView!
+    @IBOutlet weak var backdropImageView: UIImageView!
+    @IBOutlet weak var posterImage: UIImageView!
+    @IBOutlet weak var movieTitle: UILabel!
+    @IBOutlet weak var releaseDate: UILabel!
+    @IBOutlet weak var genreTagListView: TagListView!
+    @IBOutlet weak var overviewTextView: UITextView!
     
     let upcomingMovie: UpcomingMovie
     
@@ -26,11 +37,50 @@ class UpcomingMovieViewController: UIViewController {
         super.viewDidLoad()
         
         self.navigationItem.title = upcomingMovie.title
+        
+        self.fillData()
+        self.setupAppearance()
+        self.setupScrolling()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // MARK: - Data
+    
+    func fillData() {
+        self.movieTitle?.text = upcomingMovie.title
+        self.releaseDate?.text = upcomingMovie.releaseDate
+        self.overviewTextView?.text = upcomingMovie.overview
+        
+        let genreNames: Array<String> = GenresRepository.sharedInstance.namesByIdentifiers(upcomingMovie.genreIdentifiers)
+        genreTagListView.addTags(genreNames)
+        
+        // TODO: Get available backdrop size dynamically
+        self.backdropImageView?.image = TMDBImageFactory.fromPath(upcomingMovie.backdropPath, size: "780")
+        self.posterImage?.image = TMDBImageFactory.fromPath(upcomingMovie.posterPath)
+    }
+    
+    // MARK: - Appearance
+    
+    func setupAppearance() {
+        genreTagListView.textFont = UIFont.systemFont(ofSize: 11)
+        genreTagListView.alignment = .right
+    }
+    
+    func setupScrolling() {
+        // This is needed before setup scrolling, since the content view size may change according to the device screen size
+        let screenSize = UIScreen.main.bounds.size
+        let navigationBarHeight = (self.navigationController?.navigationBar.frame.height)!
+        let statusBarHeight = UIApplication.shared.statusBarFrame.size.height
+        
+        let contentHeight = screenSize.height - navigationBarHeight - statusBarHeight
+        
+        movieView.frame = CGRect.init(x: 0, y: navigationBarHeight - statusBarHeight, width: screenSize.width, height: contentHeight)
+        
+        movieScrollView.addSubview(movieView)
     }
 
 }
