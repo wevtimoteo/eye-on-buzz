@@ -26,7 +26,7 @@
                             <constraint firstAttribute="height" constant="138" id="qXI-MO-g4F"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="myE-wO-9TP">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="myE-wO-9TP" customClass="TitleLabel" customModule="EyeOnBuzz" customModuleProvider="target">
                         <rect key="frame" x="102" y="5" width="209" height="56"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="56" id="ah7-ZW-MWX"/>
@@ -35,7 +35,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFa-lG-itm" userLabel="ReleaseDateLabel">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFa-lG-itm" userLabel="ReleaseDateLabel" customClass="FieldLabel">
                         <rect key="frame" x="102" y="63" width="88" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="HrH-oH-6Gv"/>
@@ -45,7 +45,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kDE-Sp-lBG" userLabel="ReleaseDate">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kDE-Sp-lBG" userLabel="ReleaseDate" customClass="CommonLabel" customModule="EyeOnBuzz" customModuleProvider="target">
                         <rect key="frame" x="102" y="73" width="209" height="21"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="209" id="YDl-re-cJx"/>
@@ -55,7 +55,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genres" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Rn-K5-qMG" userLabel="GenreLabel">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genres" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Rn-K5-qMG" userLabel="GenreLabel" customClass="FiedlLabel" customModule="EyeOnBuzz" customModuleProvider="target">
                         <rect key="frame" x="102" y="85" width="42" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="OiX-YT-80i"/>

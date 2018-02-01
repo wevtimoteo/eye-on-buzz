@@ -46,6 +46,8 @@ class UpcomingMoviesViewController: UITableViewController, DataSourceTarget {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        LoadingIndicator.start()
+        
         let upcomingMovie = self.upcomingMoviesDataSource?.atIndex(indexPath.row) as! UpcomingMovie
         
         let upcomingMovieViewController = UpcomingMovieViewController(upcomingMovie)
@@ -118,6 +120,7 @@ class UpcomingMoviesViewController: UITableViewController, DataSourceTarget {
         self.tableView.separatorInset = UIEdgeInsets.init(top: 0, left: 0, bottom: 1.0, right: 0)
         
         self.tableView.backgroundColor = Colors.byProperty("tableViewBackground")
+        self.tableView.separatorColor = Colors.byProperty("tableSeparator")
         
         self.parent?.view.backgroundColor = Colors.byProperty("tableBackground")
         

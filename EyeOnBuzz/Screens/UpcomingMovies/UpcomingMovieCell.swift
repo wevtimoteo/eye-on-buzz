@@ -39,6 +39,12 @@ class UpcomingMovieCell: UITableViewCell {
     }
     
     func setupAppearance() {
+        self.selectionStyle = UITableViewCellSelectionStyle.none
+        self.backgroundColor = Colors.byProperty("tableCellBackground")
+        
+        genreTagListView.backgroundColor = Colors.byProperty("tagListBackground")
+        genreTagListView.tagBackgroundColor = Colors.byProperty("tagBackground")
+        
         genreTagListView.textFont = UIFont.systemFont(ofSize: 11)
         genreTagListView.alignment = .right
     }
