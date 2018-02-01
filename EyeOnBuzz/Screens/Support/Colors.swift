@@ -19,27 +19,42 @@ class Colors {
     enum Skin {
         struct ColorPalette {
             static let balticSea = UIColor.init(red: 26/255, green: 25/255, blue: 28/255, alpha:1.0)
-            static let grape = UIColor.init(red: 64/255, green: 28/255, blue: 96/255, alpha:1.0)
+            static let grape = UIColor.init(red: 80/255, green: 6/255, blue: 146/255, alpha:1.0)
             static let feijoa = UIColor.init(red: 138/255, green: 211/255, blue: 123/255, alpha:1.0)
-            static let ming = UIColor.init(red: 64/255, green: 121/255, blue: 140/255, alpha:1.0)
+            static let blue = UIColor.init(red: 41/255, green: 89/255, blue: 148/255, alpha:1.0)
             static let mystic = UIColor.init(red: 222/255, green: 230/255, blue: 237/255, alpha:1.0)
+            
+            static let black = UIColor.init(red: 37/255, green: 37/255, blue: 37/255, alpha:1.0)
+            static let white = UIColor.init(red: 249/255, green: 249/255, blue: 249/255, alpha:1.0)
             static let clear = UIColor.clear
         }
         
         static let colors = [
             // Background
-            "tableBackground": ColorPalette.feijoa,
-            "tableViewBackground": ColorPalette.ming,
+            "tableBackground": ColorPalette.clear,
+            "tableViewBackground": ColorPalette.mystic,
+            "textFieldBackground": ColorPalette.mystic,
+            
+            // --- TableCell
+            "tableCellBackground": ColorPalette.white,
+            
+            // --- TagList
+            "tagListBackground": ColorPalette.clear,
+            "tagBackground": ColorPalette.blue,
             
             // NavigationBar
-            "navigationBarBackground": ColorPalette.grape,
+            "navigationBarBackground": ColorPalette.blue,
             
             // Borders
-            "tableSeparator": ColorPalette.clear,
+            "tableSeparator": ColorPalette.mystic,
             
             // Fonts
-            "backButton": ColorPalette.ming,
-            "navigationBar": ColorPalette.mystic
+            "backButton": ColorPalette.mystic,
+            "navigationBar": ColorPalette.white,
+            "titleLabel": ColorPalette.blue,
+            "commonLabel": ColorPalette.black,
+            "fieldLabel": ColorPalette.balticSea,
+            "textField": ColorPalette.balticSea
         ]
     }
     

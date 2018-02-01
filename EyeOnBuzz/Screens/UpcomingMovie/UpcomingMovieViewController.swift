@@ -42,10 +42,22 @@ class UpcomingMovieViewController: UIViewController {
         self.setupAppearance()
         self.setupScrolling()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        LoadingIndicator.stop()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        overviewTextView.setContentOffset(CGPoint.zero, animated: false)
     }
     
     // MARK: - Data
@@ -66,8 +78,14 @@ class UpcomingMovieViewController: UIViewController {
     // MARK: - Appearance
     
     func setupAppearance() {
+        genreTagListView.backgroundColor = Colors.byProperty("tagListBackground")
+        genreTagListView.tagBackgroundColor = Colors.byProperty("tagBackground")
+        
         genreTagListView.textFont = UIFont.systemFont(ofSize: 11)
         genreTagListView.alignment = .right
+        
+        overviewTextView.backgroundColor = Colors.byProperty("textFieldBackground")
+        overviewTextView.textColor = Colors.byProperty("textField")
     }
     
     func setupScrolling() {
