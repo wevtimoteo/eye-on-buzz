@@ -89,14 +89,9 @@ class UpcomingMovieViewController: UIViewController {
     }
     
     func setupScrolling() {
-        // This is needed before setup scrolling, since the content view size may change according to the device screen size
-        let screenSize = UIScreen.main.bounds.size
-        let navigationBarHeight = (self.navigationController?.navigationBar.frame.height)!
-        let statusBarHeight = UIApplication.shared.statusBarFrame.size.height
-        
-        let contentHeight = screenSize.height - navigationBarHeight - statusBarHeight
-        
-        movieView.frame = CGRect.init(x: 0, y: navigationBarHeight - statusBarHeight, width: screenSize.width, height: contentHeight)
+        // This is needed to setup scrolling, since the content size may change according with screen orientation
+        movieView.autoresizingMask = .flexibleWidth
+        movieScrollView.contentSize = movieView.bounds.size
         
         movieScrollView.addSubview(movieView)
     }
