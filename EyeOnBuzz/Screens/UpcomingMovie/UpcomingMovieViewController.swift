@@ -14,6 +14,7 @@ class UpcomingMovieViewController: UIViewController {
     @IBOutlet weak var movieScrollView: UIScrollView!
     @IBOutlet var movieView: UIView!
     @IBOutlet weak var backdropView: UIView!
+    @IBOutlet weak var backdropImageContainerView: UIView!
     @IBOutlet weak var backdropImageView: UIImageView!
     @IBOutlet weak var posterImage: UIImageView!
     @IBOutlet weak var movieTitle: UILabel!
@@ -78,6 +79,7 @@ class UpcomingMovieViewController: UIViewController {
     // MARK: - Appearance
     
     func setupAppearance() {
+        backdropImageContainerView.backgroundColor = Colors.byProperty("backdropImageContainerBackground")
         genreTagListView.backgroundColor = Colors.byProperty("tagListBackground")
         genreTagListView.tagBackgroundColor = Colors.byProperty("tagBackground")
         
@@ -89,14 +91,9 @@ class UpcomingMovieViewController: UIViewController {
     }
     
     func setupScrolling() {
-        // This is needed before setup scrolling, since the content view size may change according to the device screen size
-        let screenSize = UIScreen.main.bounds.size
-        let navigationBarHeight = (self.navigationController?.navigationBar.frame.height)!
-        let statusBarHeight = UIApplication.shared.statusBarFrame.size.height
-        
-        let contentHeight = screenSize.height - navigationBarHeight - statusBarHeight
-        
-        movieView.frame = CGRect.init(x: 0, y: navigationBarHeight - statusBarHeight, width: screenSize.width, height: contentHeight)
+        // This is needed to setup scrolling, since the content size may change according with screen orientation
+        movieView.autoresizingMask = .flexibleWidth
+        movieScrollView.contentSize = movieView.bounds.size
         
         movieScrollView.addSubview(movieView)
     }
