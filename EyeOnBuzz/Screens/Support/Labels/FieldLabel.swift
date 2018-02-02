@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FiedlLabel: UILabel {
+class FieldLabel: UILabel {
     
     override func awakeFromNib() {
         self.textColor = Colors.byProperty("fieldLabel")
