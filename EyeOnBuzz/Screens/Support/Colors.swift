@@ -49,6 +49,7 @@ class Colors {
             "tableSeparator": ColorPalette.mystic,
             
             // Fonts
+            "activityIndicator": ColorPalette.mystic,
             "backButton": ColorPalette.mystic,
             "navigationBar": ColorPalette.white,
             "titleLabel": ColorPalette.blue,

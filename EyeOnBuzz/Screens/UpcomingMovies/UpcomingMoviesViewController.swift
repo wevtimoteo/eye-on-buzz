@@ -39,9 +39,12 @@ class UpcomingMoviesViewController: UITableViewController, DataSourceTarget {
         LoadingIndicator.start()
         
         self.updateData()
+        
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl?.addTarget(self, action: #selector(updateData), for: UIControlEvents.valueChanged)
     }
     
-    func updateData() {
+    @objc func updateData() {
         self.genresDataSource?.fetch()
     }
     
@@ -81,9 +84,9 @@ class UpcomingMoviesViewController: UITableViewController, DataSourceTarget {
         if source == DataSource.RefreshSource.dontCare {
             self.tableView.reloadData()
             
-            LoadingIndicator.stop()
-            
             self.tableView.refreshControl?.endRefreshing()
+            
+            LoadingIndicator.stop()           
         }
     }
     
@@ -115,6 +118,8 @@ class UpcomingMoviesViewController: UITableViewController, DataSourceTarget {
     
     func setupAppearance() {
         self.navigationItem.title = "Upcoming Movies"
+        
+        self.tableView.refreshControl?.tintColor = Colors.byProperty("activityIndicator")
         
         self.tableView.separatorColor = Colors.byProperty("tableSeparator")
         self.tableView.separatorInset = UIEdgeInsets.init(top: 0, left: 0, bottom: 1.0, right: 0)
