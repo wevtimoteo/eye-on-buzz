@@ -84,7 +84,7 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbe-u7-e6A" userLabel="ReleaseDateLabel" customClass="FiedlLabel" customModule="EyeOnBuzz" customModuleProvider="target">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbe-u7-e6A" userLabel="ReleaseDateLabel" customClass="FieldLabel" customModule="EyeOnBuzz" customModuleProvider="target">
                             <rect key="frame" x="112" y="63" width="88" height="21"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="21" id="Wn2-ni-CQt"/>
@@ -103,7 +103,7 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genres" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFb-FI-s4F" userLabel="GenreLabel" customClass="FiedlLabel" customModule="EyeOnBuzz" customModuleProvider="target">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genres" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFb-FI-s4F" userLabel="GenreLabel" customClass="FieldLabel" customModule="EyeOnBuzz" customModuleProvider="target">
                             <rect key="frame" x="112" y="85" width="42" height="21"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="21" id="9E0-Ah-1I7"/>
