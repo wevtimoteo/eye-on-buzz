@@ -38,6 +38,9 @@ class Colors {
             // --- TableCell
             "tableCellBackground": ColorPalette.white,
             
+            // --- UpcomingMovie screen
+            "backdropImageContainerBackground": ColorPalette.black,
+            
             // --- TagList
             "tagListBackground": ColorPalette.clear,
             "tagBackground": ColorPalette.blue,

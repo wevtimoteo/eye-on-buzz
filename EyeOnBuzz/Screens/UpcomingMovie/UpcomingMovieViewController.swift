@@ -14,6 +14,7 @@ class UpcomingMovieViewController: UIViewController {
     @IBOutlet weak var movieScrollView: UIScrollView!
     @IBOutlet var movieView: UIView!
     @IBOutlet weak var backdropView: UIView!
+    @IBOutlet weak var backdropImageContainerView: UIView!
     @IBOutlet weak var backdropImageView: UIImageView!
     @IBOutlet weak var posterImage: UIImageView!
     @IBOutlet weak var movieTitle: UILabel!
@@ -78,6 +79,7 @@ class UpcomingMovieViewController: UIViewController {
     // MARK: - Appearance
     
     func setupAppearance() {
+        backdropImageContainerView.backgroundColor = Colors.byProperty("backdropImageContainerBackground")
         genreTagListView.backgroundColor = Colors.byProperty("tagListBackground")
         genreTagListView.tagBackgroundColor = Colors.byProperty("tagBackground")
         
