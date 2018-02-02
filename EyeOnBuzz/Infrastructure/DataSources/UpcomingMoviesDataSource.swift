@@ -20,6 +20,11 @@ class UpcomingMoviesDataSource: ListDataSource {
                 if let fullResponse = response as? Dictionary<String, Any> {
                     self.processPaginationInfo(fullResponse)
                     
+                    // Clear list if first page
+                    if page == 1 {
+                        self.list.removeAll()
+                    }
+                    
                     if let upcomingMoviesResponse = fullResponse[TMDBSession.Body.results] as? [Dictionary<String, Any>] {
                         for upcomingMovieResponse in upcomingMoviesResponse {
                             let upcomingMovie = UpcomingMovie.init(upcomingMovieResponse)
