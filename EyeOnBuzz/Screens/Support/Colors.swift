@@ -34,6 +34,7 @@ class Colors {
             "tableBackground": ColorPalette.clear,
             "tableViewBackground": ColorPalette.mystic,
             "textFieldBackground": ColorPalette.mystic,
+            "commonButtonBackground": ColorPalette.blue,
             
             // --- TableCell
             "tableCellBackground": ColorPalette.white,
@@ -50,6 +51,7 @@ class Colors {
             
             // Borders
             "tableSeparator": ColorPalette.mystic,
+            "tableSeparatorClear": ColorPalette.clear,
             
             // Fonts
             "activityIndicator": ColorPalette.mystic,
@@ -58,6 +60,7 @@ class Colors {
             "titleLabel": ColorPalette.blue,
             "commonLabel": ColorPalette.black,
             "fieldLabel": ColorPalette.balticSea,
+            "commonButton": ColorPalette.white,
             "textField": ColorPalette.balticSea
         ]
     }
