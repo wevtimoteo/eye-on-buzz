@@ -35,6 +35,7 @@
 		0DBC9952200F7D5D006A01B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DBC9950200F7D5D006A01B3 /* LaunchScreen.storyboard */; };
 		0DBC995D200F7D5D006A01B3 /* EyeOnBuzzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBC995C200F7D5D006A01B3 /* EyeOnBuzzTests.swift */; };
 		0DBC9968200F7D5D006A01B3 /* EyeOnBuzzUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBC9967200F7D5D006A01B3 /* EyeOnBuzzUITests.swift */; };
+		0DC86B0A2027CCDD00845F04 /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC86B092027CCDD00845F04 /* Connectivity.swift */; };
 		0DD5D182201D2CF1003180F7 /* ImageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD5D181201D2CF1003180F7 /* ImageFactory.swift */; };
 		0DD5D184201D2DB9003180F7 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD5D183201D2DB9003180F7 /* Setting.swift */; };
 		0DDDB71920168BFD00BF50D3 /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDDB71820168BFD00BF50D3 /* Credential.swift */; };
@@ -101,6 +102,7 @@
 		0DBC9963200F7D5D006A01B3 /* EyeOnBuzzUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EyeOnBuzzUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DBC9967200F7D5D006A01B3 /* EyeOnBuzzUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeOnBuzzUITests.swift; sourceTree = "<group>"; };
 		0DBC9969200F7D5D006A01B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DC86B092027CCDD00845F04 /* Connectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
 		0DD5D181201D2CF1003180F7 /* ImageFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFactory.swift; sourceTree = "<group>"; };
 		0DD5D183201D2DB9003180F7 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		0DDDB71820168BFD00BF50D3 /* Credential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credential.swift; sourceTree = "<group>"; };
@@ -291,6 +293,7 @@
 				0DD5D185201D2E66003180F7 /* Config */,
 				0DDDB7212016A79A00BF50D3 /* DataSources */,
 				0DDDB71D2016A07600BF50D3 /* Router.swift */,
+				0DC86B092027CCDD00845F04 /* Connectivity.swift */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -517,6 +520,7 @@
 				0DDDB7232016A7A900BF50D3 /* HTTPClient.swift in Sources */,
 				0D91636120192734005C0122 /* UpcomingMovie.swift in Sources */,
 				0DBC9946200F7D5D006A01B3 /* AppDelegate.swift in Sources */,
+				0DC86B0A2027CCDD00845F04 /* Connectivity.swift in Sources */,
 				0D557E64201FEBBA0064BBCC /* BackButton.swift in Sources */,
 				0DD5D184201D2DB9003180F7 /* Setting.swift in Sources */,
 				0DE8019A201BDC8600461367 /* UpcomingMovieCell.swift in Sources */,
