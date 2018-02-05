@@ -20,6 +20,8 @@ class UpcomingMoviesViewController: UITableViewController, DataSourceTarget {
     init() {
         super.init(nibName: nil, bundle: nil)
         
+        self.subscribe()
+        
         self.genresDataSource = GenresDataSource.init(dataSourceTarget: self)
         self.upcomingMoviesDataSource = UpcomingMoviesDataSource.init(dataSourceTarget: self)
         
@@ -38,11 +40,25 @@ class UpcomingMoviesViewController: UITableViewController, DataSourceTarget {
         
         LoadingIndicator.start()
         
-        self.updateData()
-        
         self.refreshControl = UIRefreshControl()
         self.refreshControl?.addTarget(self, action: #selector(updateData), for: UIControlEvents.valueChanged)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if genresDataSource!.list.isEmpty || upcomingMoviesDataSource!.list.isEmpty {
+            self.updateData()
+        }
+    }
+    
+    func subscribe() {
+        NotificationCenter.default.addObserver(self, selector: #selector(updateData), name: .fetchUpcomingMoviesData, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(showInvalidAPIKeyMessage), name: .invalidAPIKey, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(showUnreachableNetworkMessage), name: .unreachableNetwork, object: nil)
+    }
+    
+    // MARK: - Data
     
     @objc func updateData() {
         self.genresDataSource?.fetch()
@@ -75,19 +91,55 @@ class UpcomingMoviesViewController: UITableViewController, DataSourceTarget {
     // MARK: - DataSourceTarget Protocol
     
     func dataRefreshed(source: DataSource.RefreshSource, status: DataSource.RefreshStatus) {
-        if source == DataSource.RefreshSource.genreList {
+        switch status {
+        case .success:
+            checkSuccessDataSource(source)
+        case .failure:
+            showMessageView("An error occurred, cannot fetch movies. Please try again", tryAgain: true)
+        }
+    }
+    
+    func checkSuccessDataSource(_ source: DataSource.RefreshSource) {
+        switch source {
+        case .genreList:
             GenresRepository.setup(list: (self.genresDataSource?.list)!)
             
             self.upcomingMoviesDataSource?.fetch()
-        }
-        
-        if source == DataSource.RefreshSource.dontCare {
+        case .dontCare:
+            self.tableView.separatorColor = Colors.byProperty("tableSeparator")
+            self.tableView.backgroundView?.isHidden = true
+            
+            // TODO: Check if list is empty
             self.tableView.reloadData()
             
             self.tableView.refreshControl?.endRefreshing()
             
-            LoadingIndicator.stop()           
+            LoadingIndicator.stop()
         }
+    }
+    
+    @objc func showInvalidAPIKeyMessage() {
+        showMessageView("Invalid API key, please setup credentials then build again.")
+    }
+    
+    @objc func showUnreachableNetworkMessage() {
+        showMessageView("Please check your network connection.", tryAgain: true)
+    }
+    
+    @objc func showMessageView(_ title: String, tryAgain: Bool = false) {
+        let messageView = MessageView(frame: self.navigationController!.view.frame)
+        
+        let tryAgainAction: Notification.Name? = tryAgain ? .fetchUpcomingMoviesData : nil
+        
+        messageView.setup(title, notificationAction: tryAgainAction)
+        
+        self.tableView.separatorColor = Colors.byProperty("tableSeparatorClear")
+        
+        self.tableView.backgroundView = messageView
+        self.tableView.backgroundView?.isHidden = false
+        
+        self.tableView.refreshControl?.endRefreshing()
+        LoadingIndicator.stop()
     }
     
     // MARK: UITableViewDataSource
@@ -121,7 +173,6 @@ class UpcomingMoviesViewController: UITableViewController, DataSourceTarget {
         
         self.tableView.refreshControl?.tintColor = Colors.byProperty("activityIndicator")
         
-        self.tableView.separatorColor = Colors.byProperty("tableSeparator")
         self.tableView.separatorInset = UIEdgeInsets.init(top: 0, left: 0, bottom: 1.0, right: 0)
         
         self.tableView.backgroundColor = Colors.byProperty("tableViewBackground")
