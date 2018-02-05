@@ -6,7 +6,6 @@
 //  Copyright © 2018 Weverton Couto Timoteo. All rights reserved.
 //
 
-import Foundation
 import Alamofire
 
 class HTTPClient {
