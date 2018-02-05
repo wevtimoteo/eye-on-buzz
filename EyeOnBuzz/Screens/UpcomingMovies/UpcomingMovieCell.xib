@@ -28,6 +28,7 @@
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="myE-wO-9TP" customClass="TitleLabel" customModule="EyeOnBuzz" customModuleProvider="target">
                         <rect key="frame" x="102" y="5" width="209" height="56"/>
+                        <accessibility key="accessibilityConfiguration" label="Upcoming movie title"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="56" id="ah7-ZW-MWX"/>
                         </constraints>
@@ -37,6 +38,7 @@
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFa-lG-itm" userLabel="ReleaseDateLabel" customClass="FieldLabel" customModule="EyeOnBuzz" customModuleProvider="target">
                         <rect key="frame" x="102" y="63" width="88" height="21"/>
+                        <accessibility key="accessibilityConfiguration" label="Upcoming date release date label"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="HrH-oH-6Gv"/>
                             <constraint firstAttribute="width" constant="88" id="aXv-nP-yuk"/>
@@ -47,6 +49,7 @@
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kDE-Sp-lBG" userLabel="ReleaseDate" customClass="CommonLabel" customModule="EyeOnBuzz" customModuleProvider="target">
                         <rect key="frame" x="102" y="73" width="209" height="21"/>
+                        <accessibility key="accessibilityConfiguration" label="Upcoming date release date"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="209" id="YDl-re-cJx"/>
                             <constraint firstAttribute="height" constant="21" id="z3n-Hs-ejD"/>
@@ -57,6 +60,7 @@
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genres" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Rn-K5-qMG" userLabel="GenreLabel" customClass="FieldLabel" customModule="EyeOnBuzz" customModuleProvider="target">
                         <rect key="frame" x="102" y="85" width="42" height="21"/>
+                        <accessibility key="accessibilityConfiguration" label="Upcoming movie genre label"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="OiX-YT-80i"/>
                             <constraint firstAttribute="width" constant="42" id="S7u-8c-hhH"/>
@@ -68,8 +72,9 @@
                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y97-yY-DhC" userLabel="GenreTagListView" customClass="TagListView" customModule="TagListView" propertyAccessControl="none">
                         <rect key="frame" x="102" y="107" width="209" height="32"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <accessibility key="accessibilityConfiguration">
+                        <accessibility key="accessibilityConfiguration" label="Upcoming movie genre list">
                             <accessibilityTraits key="traits" notEnabled="YES"/>
+                            <bool key="isElement" value="YES"/>
                         </accessibility>
                         <constraints>
                             <constraint firstAttribute="height" constant="32" id="HQT-GJ-PRL"/>
