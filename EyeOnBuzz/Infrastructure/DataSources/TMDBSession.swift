@@ -28,8 +28,12 @@ class TMDBSession {
     // MARK: HTTP Verbs
     
     func get(url: URLConvertible, parameters: Parameters?, success: @escaping (Int, Any, Any) -> Void, failure: @escaping (Int, Any) -> Void) {
-        httpClient.get(url: url, parameters: signParameters(parameters)).responseJSON { response in
-            self.handleResponse(response: response, success: success, failure: failure)
+        if Connectivity.isNetworkUnreachable() {
+            notificationCenter.post(name: .unreachableNetwork, object: nil)
+        } else {
+            httpClient.get(url: url, parameters: signParameters(parameters)).responseJSON { response in
+                self.handleResponse(response: response, success: success, failure: failure)
+            }
         }
     }
     
@@ -59,9 +63,9 @@ class TMDBSession {
             if let statusCode = response.response?.statusCode {
                 if statusCode == 401 {
                     notificationCenter.post(name: .invalidAPIKey, object: nil)
+                } else {
+                    failure(statusCode, response)
                 }
-                
-                failure(statusCode, response)
             } else {
                 // Network issues
                 failure(400, response)

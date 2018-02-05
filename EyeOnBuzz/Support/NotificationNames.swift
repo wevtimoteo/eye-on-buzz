@@ -10,4 +10,6 @@ import Foundation
 
 extension Notification.Name {
     static let invalidAPIKey = Notification.Name("InvalidAPIKey")
+    static let unreachableNetwork = Notification.Name("UnreachableNetwork")
+    static let fetchUpcomingMoviesData = Notification.Name("FetchUpcomingMoviesData")
 }
