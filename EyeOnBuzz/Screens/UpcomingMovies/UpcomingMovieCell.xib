@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="148" id="KGk-i7-Jjw" customClass="UpcomingMovieCell" customModule="EyeOnBuzz" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="148"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="147.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rq9-pK-D9a" userLabel="Backdrop or Poster">
+                        <rect key="frame" x="5" y="5" width="92" height="138"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="92" id="fEu-Di-ywX"/>
+                            <constraint firstAttribute="height" constant="138" id="qXI-MO-g4F"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="myE-wO-9TP" customClass="TitleLabel" customModule="EyeOnBuzz" customModuleProvider="target">
+                        <rect key="frame" x="102" y="5" width="209" height="56"/>
+                        <accessibility key="accessibilityConfiguration" label="Upcoming movie title"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="56" id="ah7-ZW-MWX"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFa-lG-itm" userLabel="ReleaseDateLabel" customClass="FieldLabel" customModule="EyeOnBuzz" customModuleProvider="target">
+                        <rect key="frame" x="102" y="63" width="88" height="21"/>
+                        <accessibility key="accessibilityConfiguration" label="Upcoming date release date label"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="HrH-oH-6Gv"/>
+                            <constraint firstAttribute="width" constant="88" id="aXv-nP-yuk"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kDE-Sp-lBG" userLabel="ReleaseDate" customClass="CommonLabel" customModule="EyeOnBuzz" customModuleProvider="target">
+                        <rect key="frame" x="102" y="73" width="209" height="21"/>
+                        <accessibility key="accessibilityConfiguration" label="Upcoming date release date"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="209" id="YDl-re-cJx"/>
+                            <constraint firstAttribute="height" constant="21" id="z3n-Hs-ejD"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genres" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Rn-K5-qMG" userLabel="GenreLabel" customClass="FieldLabel" customModule="EyeOnBuzz" customModuleProvider="target">
+                        <rect key="frame" x="102" y="85" width="42" height="21"/>
+                        <accessibility key="accessibilityConfiguration" label="Upcoming movie genre label"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="OiX-YT-80i"/>
+                            <constraint firstAttribute="width" constant="42" id="S7u-8c-hhH"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y97-yY-DhC" userLabel="GenreTagListView" customClass="TagListView" customModule="TagListView" propertyAccessControl="none">
+                        <rect key="frame" x="102" y="107" width="209" height="32"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <accessibility key="accessibilityConfiguration" label="Upcoming movie genre list">
+                            <accessibilityTraits key="traits" notEnabled="YES"/>
+                            <bool key="isElement" value="YES"/>
+                        </accessibility>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="32" id="HQT-GJ-PRL"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="0Rn-K5-qMG" firstAttribute="top" secondItem="MFa-lG-itm" secondAttribute="bottom" constant="1" id="3zw-T4-p5O"/>
+                    <constraint firstAttribute="trailing" secondItem="myE-wO-9TP" secondAttribute="trailing" constant="9" id="CUt-sI-3wA"/>
+                    <constraint firstItem="Y97-yY-DhC" firstAttribute="top" secondItem="0Rn-K5-qMG" secondAttribute="bottom" constant="1" id="DEy-ZC-rVb"/>
+                    <constraint firstItem="MFa-lG-itm" firstAttribute="leading" secondItem="Rq9-pK-D9a" secondAttribute="trailing" constant="5" id="IVL-H2-obg"/>
+                    <constraint firstItem="kDE-Sp-lBG" firstAttribute="top" secondItem="MFa-lG-itm" secondAttribute="bottom" constant="-11" id="Jra-dj-F8G"/>
+                    <constraint firstAttribute="trailing" secondItem="kDE-Sp-lBG" secondAttribute="trailing" constant="9" id="KRr-LW-mU5"/>
+                    <constraint firstAttribute="trailing" secondItem="Y97-yY-DhC" secondAttribute="trailing" constant="9" id="Usi-uL-dBR"/>
+                    <constraint firstItem="Rq9-pK-D9a" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="VhF-HD-Bfh"/>
+                    <constraint firstItem="Rq9-pK-D9a" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="diG-CW-KWg"/>
+                    <constraint firstItem="kDE-Sp-lBG" firstAttribute="leading" secondItem="Rq9-pK-D9a" secondAttribute="trailing" constant="5" id="dtv-yu-Wch"/>
+                    <constraint firstItem="0Rn-K5-qMG" firstAttribute="leading" secondItem="Rq9-pK-D9a" secondAttribute="trailing" constant="5" id="elW-4H-cos"/>
+                    <constraint firstItem="myE-wO-9TP" firstAttribute="leading" secondItem="Rq9-pK-D9a" secondAttribute="trailing" constant="5" id="qeh-UG-kdW"/>
+                    <constraint firstItem="MFa-lG-itm" firstAttribute="top" secondItem="myE-wO-9TP" secondAttribute="bottom" constant="2" id="qo0-9Y-59I"/>
+                    <constraint firstItem="myE-wO-9TP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="w45-lj-3Fg"/>
+                    <constraint firstItem="Y97-yY-DhC" firstAttribute="leading" secondItem="Rq9-pK-D9a" secondAttribute="trailing" constant="5" id="z2H-nr-nYj"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="genreTagListView" destination="Y97-yY-DhC" id="hob-E3-JWY"/>
+                <outlet property="posterImage" destination="Rq9-pK-D9a" id="uSI-DZ-RTa"/>
+                <outlet property="releaseDate" destination="kDE-Sp-lBG" id="V4y-Ef-eGQ"/>
+                <outlet property="title" destination="myE-wO-9TP" id="Hyh-8y-gmf"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="54"/>
+        </tableViewCell>
+    </objects>
+</document>
